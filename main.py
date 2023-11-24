@@ -2,11 +2,12 @@ import requests
 import csv
 
 def create_user(username_value, password_value, email_value, display_name_value):
-    url = f"http://localhost:7990/rest/api/latest/admin/users?name={username_value}&password={password_value}&emailAddress={email_value}&displayName={display_name_value}"
+    base_url = "your_site_url"
+    url = f"{base_url}y/rest/api/latest/admin/users?name={username_value}&password={password_value}&emailAddress={email_value}&displayName={display_name_value}"
     url_get_user = f"http://localhost:7990/rest/api/latest/admin/users/{username_value}"
 
-    admin_username = "admin"
-    admin_password = "nogomet91"
+    admin_username = "your_username"
+    admin_password = "your_password"
 
     headers = {
         'Content-Type': 'application/json'
