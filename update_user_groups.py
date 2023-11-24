@@ -4,11 +4,11 @@ import csv
 
 
 def add_user_to_group(user, group):
-    base_url = "http://localhost:7990"
+    base_url = "your_site_url"
     api_url = f"{base_url}/rest/api/latest/admin/users/add-groups"
 
-    admin_username = "admin"
-    admin_password = "nogomet91"
+    admin_username = "your_username"
+    admin_password = "your_password"
 
     headers = {
         "Accept": "application/json",
