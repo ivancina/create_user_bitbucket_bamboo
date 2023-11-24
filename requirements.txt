@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Check if Python is installed
+if ! command -v python &> /dev/null; then
+    echo "Python is not installed. Please install Python and try again."
+    exit 1
+fi
+
+# Check if pip is installed
+if ! command -v pip &> /dev/null; then
+    echo "pip is not installed. Installing pip..."
+    python -m ensurepip --upgrade
+fi
+
+# Install dependencies
+echo "Installing required dependencies..."
+pip install requests
+
+echo "Setup completed successfully."

@@ -1,0 +1,50 @@
+# User Creation Script
+
+This script allows you to create users in a Bitbucket server using a CSV file.
+
+## Prerequisites
+
+Before using this script, ensure that you have the following:
+
+- Python installed on your system
+- The `requests` library installed (`pip install requests`)
+
+Install the required dependencies by running the following command:
+pip install -r requirements.txt
+
+This command will install the necessary Python packages specified in the requirements.txt file.
+
+## Getting Started
+
+1. Clone this repository to your local machine.
+
+2. Make sure you have a Bitbucket server running. If your server is running on a different URL or port, update the `url` variable in the script accordingly.
+
+3. Prepare a CSV file named `users.csv` with the following format:
+
+   ```csv
+   username,display_name,password,email
+   john_doe,John Doe,pass123,johndoe@example.com
+   jane_smith,Jane Smith,pass456,janesmith@example.com
+
+   Each row represents a user, with four columns: username, display_name, password, and email. You can add as many users as needed.
+
+   Open a terminal or command prompt and navigate to the cloned repository directory.
+
+   Run the script using the following command:
+
+   The script will read the users.csv file and create users in the Bitbucket server.
+
+   Check the output in the terminal to see the status of user creation. If any errors occur, they will be displayed in the terminal.
+
+   Verify the user creation by logging in to your Bitbucket server and checking the user list.
+
+   Troubleshooting
+   If you encounter any issues or errors while running the script, please make sure you have met all the prerequisites and followed the instructions correctly.
+
+   Update the url variable in the script to match the correct URL and port.
+
+   Feel free to customize the README file according to your specific requirements and provide any additional instructions or information that may be relevant.
+
+   Let me know if you need any further assistance!
+
