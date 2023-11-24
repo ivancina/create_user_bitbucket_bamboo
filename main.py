@@ -3,7 +3,7 @@ import csv
 
 def create_user(username_value, password_value, email_value, display_name_value):
     base_url = "your_site_url"
-    url = f"{base_url}y/rest/api/latest/admin/users?name={username_value}&password={password_value}&emailAddress={email_value}&displayName={display_name_value}"
+    url = f"{base_url}/rest/api/latest/admin/users?name={username_value}&password={password_value}&emailAddress={email_value}&displayName={display_name_value}"
     url_get_user = f"{base_url}/rest/api/latest/admin/users/{username_value}"
 
     admin_username = "your_username"
@@ -41,12 +41,14 @@ with open("files/users.csv", "r") as file:
     next(reader)
 
     # Iterate over the rows
-    for row in reader:
+    for index, row in enumerate(reader, start=1):
         try:
             username = row[0]
             display_name = row[1]
             password = row[2]
             email = row[3]
-            create_user(username, password, email, display_name)
+            response_user_created = create_user(username, password, email, display_name)
+            if not response_user_created.startswith("User"):
+                print(f"Row {index}: User '{username}' created successfully.")
         except IndexError:
-            print("Invalid row format. Skipping user creation.")
+            print(f"Row {index}: Invalid row format. Skipping user creation.")
