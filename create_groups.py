@@ -39,6 +39,6 @@ with open("files/BitbucketStaging_group.csv", "r") as file:
             group = row[0]
             response_group_create = create_group(group)
         except IndexError:
-                print(f"Row {index}: Invalid row format. Skipping user creation.")
+                print(f"Row {index}: Invalid row format. Skipping group creation.")
 
 
